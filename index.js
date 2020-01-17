@@ -6,7 +6,7 @@ const util = require('util');
 const asyncFileWrite = util.promisify(fs.writeFile);
 
 
-// Prompt user for Github name and favorite color.
+// Prompt user for Github name and favorite color out of the colors listedno.
 
 function userPrompt()  {
     return inquirer.prompt([
@@ -32,3 +32,5 @@ function userPrompt()  {
 }
 
 userPrompt()
+
+

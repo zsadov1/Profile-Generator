@@ -1,0 +1,33 @@
+
+  
+body {
+  background-color: #B1B1B1;
+  color: #B1B1B1;
+}
+
+h3 {
+  color: #333;
+}
+
+.header-position {
+  position: relative;
+  top: 60px;
+  border-radius: 6px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.header-position img {
+  position: relative;
+  top: -40px;
+  border-radius: 50%;
+  border: 9px solid #fff;
+}
+
+
+.data-card {
+  margin: 30px;
+  padding: 20px;
+  border-radius: 6px;
+}
+

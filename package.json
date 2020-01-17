@@ -1,0 +1,27 @@
+{
+  "name": "profile-generator-package",
+  "version": "1.0.0",
+  "description": "A command-line application that dynamically generates a PDF profile from a GitHub username",
+  "main": "index.js",
+  "dependencies": 
+  {
+    "axios": "^0.19.1",
+    "debug": "^4.1.1",
+    "inquirer": "^7.0.3",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsadov1/Profile-Generator.git"
+  },
+  "author": "Zachary Sadovszky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsadov1/Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/zsadov1/Profile-Generator#readme"
+}
