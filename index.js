@@ -2,26 +2,33 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const puppeteer = require('puppeteer');
+const util = require('util');
+const asyncFileWrite = util.promisify(fs.writeFile);
 
 
-// const generateHTML = require('./generateHTML.js')
+// Prompt user for Github name and favorite color.
 
-var conversion = convertFactory({
-    converterPath: convertFactory.converters.PDF
-  });
+function userPrompt()  {
+    return inquirer.prompt([
+        {
+            type: "input",
+            name: "username",
+            message: "What is your Github Username?"
+        },
+        {
+            type: "list",
+            name: "username",
+            message: "What is your favorite color below?",
+            choices: [
+                "Yellow",
+                "Orange",
+                "Red",
+                "Green",
+                "Pink",
+                "Teal"
+            ]
+        }
+    ]);
+}
 
-
-let data = {};
-
-let questions = [
-    {
-        message: 'What is your github username?',
-        name: 'username',
-    },
-    {
-        message: 'What is your favorite color?',
-        name: 'color',
-        type: 'list',
-        choices: ['green', 'blue', 'pink', 'red'],
-    }
-]
+userPrompt()
