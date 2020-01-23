@@ -25,7 +25,7 @@ From the command line, open the node-pdf folder and enter
 
 node index.js
 
-The user is propmpted with thier Github username, after which they are asked to pick their favortie color below(yellow, orange, red, green, pink, teal).
+The user is propmpted with their Github username, after which they are asked to pick their favortie color below(yellow, orange, red, green, pink, teal).
 
 License Copyright (c) 2020 Zachary Sadovszky
 
