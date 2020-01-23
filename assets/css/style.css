@@ -29,3 +29,32 @@ h3 {
   border-radius: 6px;
 }
 
+#boxOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+#boxTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#boxThree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#boxFour {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#boxFive {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}

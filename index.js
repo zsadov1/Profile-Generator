@@ -47,12 +47,10 @@ function htmlProfile (userData, gitData, starsData) {
     <title>${gitData.name}</title>
     <link re="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-    <style> 
-    
-
+    <style>
     body {
         background-color: ${userData.color};
-        color: #B1B1B1;
+        color: black;
       }
       
       h3 {
@@ -80,105 +78,122 @@ function htmlProfile (userData, gitData, starsData) {
         padding: 20px;
         border-radius: 6px;
       }
-          
-    
-    
+      
+      #boxOne {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+      }
+      
+      #boxTwo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      #boxThree {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      #boxFour {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      #boxFive {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+      }
+
     </style>
+    </head>
 
 
     <body>
 
     <header>
         <div class="container">
-            <div class='jumbotron'>
                 <img src="${gitData.data.avatar_url}"/>
                 <h1 class="jumbo">${gitData.data.name}</h1>
-                <p class="header-links d-flex justify-content-center flex-wrap"> 
                 <a href="https://www.google.com/maps/place/${gitData.data.location}">${gitData.data.location}</a>
                 <a href="${gitData.data.html_url}">GitHub Profile</a>
                 </p>
             </div>
         </div>
     </header>
-
-<!-- Container below contains github repo stats -->
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-            <div class="card-body">
-                <h4 class="card-title">
-                </h4>
-                <p>${gitData.data.bio}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-            <div class="card-body">
-                <h4 class="card-title">
-                <a  >Public Repos:</a >
-                </h4>
-                <p>${gitData.data.public_repos}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-            <div class="card-body">
-                <h4 class="card-title">
-                <a>Followers</a>
-                </h4>
-                <p>${gitData.data.followers}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-            <div class="card-body">
-                <h4 class="card-title">
-                <a>Following:</a>
-                </h4>
-                <p>${gitData.data.following}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-            <div class="card-body">
-                <h4 class="card-title">
-                <a>Stars</a>
-                </h4>
-                <p>${gitData.data.length}</p>
-            </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
+    
+    <!-- Container below contains github repo stats -->
+    
+    
+        <div class="container">
+    
+            <div class="row" id="boxOne">
+                <div class="col text-center">
                 <h4>${gitData.data.bio}</h4>
+                </div>
+            </div>
+    
+        <div class="row" id="boxTwo">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        <a>Public Repos:</a>
+                        </h4>
+                        <p>${gitData.data.public_repos}</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-</body>
-</html>
+    
+        <div class="row" id="boxThree">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        <a>Followers</a>
+                        </h4>
+                        <p>${gitData.data.followers}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row" id="boxFour">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                    <a>Following:</a>
+                    </h4>
+                    <p>${gitData.data.following}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row" id="boxFive">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                    <h4 class="card-title">
+                    <a>Stars:</a>
+                    </h4>
+                    <p>${starsData.data.length}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    
+    
+    </body>
+    </html>
 `;
 }
 
@@ -190,10 +205,7 @@ async function init() {
             `https://api.github.com/users/${userData.username}`
         );
 
-        const starsData = await axios.get(
-            // `https://api.github.com/users/${userData.username}/starred`
-            `https://api.github.com/users/${userData.username}/starred`
-        );
+        const starsData = await axios.get(`https://api.github.com/users/${gitData.username}/starred`);
 
         const html = htmlProfile(userData, gitData, starsData);
 
