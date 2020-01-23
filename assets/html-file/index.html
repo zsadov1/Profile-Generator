@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>${gitData.name}</title>
+<link re="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+</head>
+
+
+<body>
+
+<header>
+    <div class="container">
+        <div class='jumbotron'>
+            <img src="${gitData.data.avatar_url}"/>
+            <h1 class="jumbo">${gitData.data.name}</h1>
+            <!-- <p class="header-links d-flex justify-content-center flex-wrap">  -->
+            <p href="https://www.google.com/maps/place/${gitData.data.location}">${gitData.data.location}</p>
+            </br>
+            <p href="${gitData.data.html_url}">GitHub Profile</p>
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- Container below contains github repo stats -->
+
+
+    <div class="container">
+
+        <div class="row" id="boxOne">
+            <div class="col text-center">
+            <h4>${gitData.data.bio}</h4>
+            </div>
+        </div>
+
+    <div class="row" id="boxTwo">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                    <a>Public Repos:</a>
+                    </h4>
+                    <p>${gitData.data.public_repos}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="boxThree">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                    <a>Followers</a>
+                    </h4>
+                    <p>${gitData.data.followers}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="boxFour">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                <a>Following:</a>
+                </h4>
+                <p>${gitData.data.following}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="boxFive">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                <h4 class="card-title">
+                <a>Stars</a>
+                </h4>
+                <p>${gitData.data.length}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+</body>
+</html>
