@@ -1,8 +1,6 @@
-
-  
 body {
-  background-color: #B1B1B1;
-  color: #B1B1B1;
+  background-color: ${userData.color};
+  color: black;
 }
 
 h3 {
